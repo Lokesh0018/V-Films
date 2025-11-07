@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Island+Moments&display=swap');
+
 :root {
   --white: #fff;
   --black: #000;
-  --menu: #0F3255; 
+  --navBg: #FFFBFB59;
+  --menu: #0F3255;
   --cntBtn: #F15D2B;
   --border: 1px solid black;
+  --vector: #FDD0C1;
 }
 
 * {
@@ -13,14 +16,13 @@
   box-sizing: border-box;
 }
 
+.active {
+  color: var(--cntBtn);
+}
+
 .App {
   height: 100vh;
   width: 100vw;
-} 
-
-.hero {
-  height: 100%;
-  width: 100%;
   background-image: url('./asserts/BG.png');
   background-repeat: no-repeat;
   background-size: cover;
@@ -36,6 +38,7 @@
   gap: 10px;
   padding: 15px 20px 0 0;
   overflow: hidden;
+  background-color: var(--navBg);
 }
 
 .menu {
@@ -68,17 +71,18 @@
 }
 
 .navItems {
-  height: 50px; 
-  width: 624px; 
-  display: flex; 
-  justify-content: space-evenly; 
-  align-items: center; 
+  height: 50px;
+  width: 624px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   overflow: hidden;
 }
 
 .navItems ul {
   list-style: none;
   position: relative;
+  font-family: "Instrument Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
   right: -700px;
@@ -88,6 +92,7 @@
   gap: 24px;
   transition: right 0.5s ease-in-out;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .navItems ul.open {
@@ -181,4 +186,330 @@
   font-family: sans-serif;
   font-size: 18px;
   margin: 50px 0;
+}
+
+.navLogoContainer {
+  height: 63px;
+  width: 174px;
+  position: absolute;
+  top: 5px;
+  right: 25px;
+  bottom: 10px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLogo {
+  width: 124px;
+  height: 48px;
+}
+
+.aboutCard {
+  width: 450px;
+  height: 400px;
+  opacity: 1;
+  position: absolute;
+  top: -17px;
+  left: 150px;
+}
+
+.cardContent {
+  position: relative;
+  font-family: Halant;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: var(--menu);
+  transform: rotate(-20deg);
+  z-index: 1;
+  top: 120px;
+  left: 50px;
+  width: 70%;
+}
+
+
+.pin {
+  width: 50px;
+  height: 65px;
+  position: absolute;
+  top: 15px;
+  right: 60px;
+  z-index: 1;
+}
+
+.card {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  height: 60%;
+  width: 90%;
+  transform: rotate(-20deg);
+  box-shadow: 0px 12px 40px 0px #00000026;
+  z-index: 0;
+}
+
+.gateImg {
+  width: 350px;
+  height: 350px;
+  opacity: 1;
+  position: absolute;
+  top: 400px;
+  left: 20px;
+}
+
+.group {
+  width: 600px;
+  height: 300px;
+  opacity: 1;
+  position: absolute;
+  bottom: 150px;
+  left: 700px;
+}
+
+.grp1,
+.grp2,
+.grp3 {
+  font-family: Island Moments;
+  font-weight: 400;
+  font-style: Regular;
+  position: absolute;
+  font-size: 42px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.grp1 {
+  bottom: 150px;
+  left: 500px;
+}
+
+.vector1 {
+  position: absolute;
+  width: 150px;
+  height: 226.px;
+  bottom: 180px;
+  left: 600px;
+}
+
+.grp2 {
+  top: 130px;
+  left: 750px;
+}
+
+.vector2 {
+  position: absolute;
+  top: 180px;
+  left: 830px;
+}
+
+.grp3 {
+  top: 200px;
+  right: 50px;
+}
+
+.vector3 {
+  position: absolute;
+  top: 250px;
+  right: 150px;
+}
+
+.aboutUsHeader {
+  font-family: Halant;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 30px;
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.aboutUsContent {
+  width: 450px;
+  top: 250px;
+  left: 100px;
+  font-family: Instrument Sans;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  position: absolute;
+}
+
+.aboutUsCard {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  transform: rotate(15deg);
+  bottom: 150px;
+  box-shadow: 0px 12px 40px 0px #00000026;
+}
+
+.aboutUsCard.c1 {
+  left: 80px;
+}
+
+.aboutUsCard.c2 {
+  left: 250px;
+}
+
+.aboutUsCard.c3 {
+  left: 420px;
+}
+
+.aboutUsCardContent {
+  width: 180px;
+  height: 180px;
+  transform: rotate(15deg);
+  bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  gap: 10px;
+  transform: rotate(15deg);
+}
+
+.aboutUsCardContent.c1 {
+  left: 80px;
+}
+
+.aboutUsCardContent.c2 {
+  left: 250px;
+}
+
+.aboutUsCardContent.c3 {
+  left: 420px;
+}
+
+.cardTop {
+  color: var(--menu);
+  font-size: 80px;
+}
+
+.cardBottom {
+  color: var(--cntBtn);
+  font-size: 26px;
+}
+
+.aboutUsTxt {
+  font-family: Island Moments;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  width: 800px;
+  height: 368;
+  position: absolute;
+  top: 151px;
+  right: 50px;
+}
+
+.brands {
+  position: absolute;
+  bottom: 10px;
+  right: 50px;
+  width: 800px;
+  height: 400px;
+}
+
+.obj {
+  position: absolute;
+  bottom: 10px;
+  right: 180px;
+}
+
+.servicesHeader {
+  font-family: Halant;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  width: 100vw;
+}
+
+.servicesCards {
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 60px 0;
+}
+
+.servicesCard {
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: var(--white);
+  font-family: Halant;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.servicesCard img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.servicesCard.c1 {
+  transform: rotate(10deg);
+}
+
+.servicesCard.c2 {
+  margin-top: 30px;
+}
+
+.servicesCard.c3 {
+  transform: rotate(-10deg);
+}
+
+.servicesCard:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.tape.t1 {
+  position: absolute;
+  left: 220px;
+  z-index: 1;
+}
+
+.tape.t2 {
+  position: absolute;
+  left: 650px;
+  transform: rotate(10deg);
+  top: 230px;
+  z-index: 1;
+}
+
+.tape.t3 {
+  position: absolute;
+  right: 220px;
+  transform: rotate(30deg);
+  z-index: 1;
 }
