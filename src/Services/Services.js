@@ -5,6 +5,8 @@ import Person1 from "../asserts/person1.png";
 import Person2 from "../asserts/person2.png";
 import Person3 from "../asserts/person3.png";
 import Tape from "../asserts/tape.png";
+import { ReactComponent as Footer } from "../asserts/footer.svg";
+
 const Services = () => {
     return (
         <div className="services">
@@ -23,6 +25,7 @@ const Services = () => {
                 <div className="servicesCard c2"><img src={Person2} alt="" /><span>Branding</span></div>
                 <div className="servicesCard c3"><img src={Person3} alt="" /><span>Art Curation</span></div>
             </div>
+            <Footer className="footer" />
         </div>
     );
 }
