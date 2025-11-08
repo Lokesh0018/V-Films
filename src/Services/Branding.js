@@ -7,6 +7,7 @@ import { ReactComponent as Br1 } from "../asserts/Branding Vector 01.svg";
 import { ReactComponent as Br2 } from "../asserts/Branding Vector 02.svg";
 import { ReactComponent as Br3 } from "../asserts/Branding Vector 03.svg";
 import { ReactComponent as Br4 } from "../asserts/Branding Vector 04.svg";
+import { NavLink } from "react-router-dom";
 
 const Branding = () => {
     return (
@@ -17,7 +18,7 @@ const Branding = () => {
             <div className="servicesHeader">
                 <p>A brand is a voice, and a product is a souvenir." - Lisa Gansky</p>
                 <Ul />
-                <button className="backBtn"><BArrow />Back</button>
+                <NavLink to="/services"><button className="backBtn"><BArrow />Back</button></NavLink>
             </div>
             <div className="servicesCards">
                 <div className="servicesCard fp"><img src={Bimg} alt="" /><span>Film Production</span></div>

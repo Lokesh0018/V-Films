@@ -6,6 +6,7 @@ import Person2 from "../asserts/person2.png";
 import Person3 from "../asserts/person3.png";
 import Tape from "../asserts/tape.png";
 import { ReactComponent as Footer } from "../asserts/footer.svg";
+import { NavLink } from "react-router-dom";
 
 const Services = () => {
     return (
@@ -21,9 +22,9 @@ const Services = () => {
             <img src={Tape} alt="" className="tape t2" />
             <img src={Tape} alt="" className="tape t3" />
             <div className="servicesCards">
-                <div className="servicesCard c1"><img src={Person1} alt="" /><span>Film Production</span></div>
-                <div className="servicesCard c2"><img src={Person2} alt="" /><span>Branding</span></div>
-                <div className="servicesCard c3"><img src={Person3} alt="" /><span>Art Curation</span></div>
+                <div className="servicesCard c1"><NavLink to="/services/film-production"><img src={Person1} alt="" /><span>Film Production</span></NavLink></div>
+                <div className="servicesCard c2"><NavLink to="/services/branding"><img src={Person2} alt="" /><span>Branding</span></NavLink></div>
+                <div className="servicesCard c3"><NavLink to="/services/art-curation"><img src={Person3} alt="" /><span>Art Curation</span></NavLink></div>
             </div>
             <Footer className="footer" />
         </div>

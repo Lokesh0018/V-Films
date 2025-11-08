@@ -7,6 +7,7 @@ import { ReactComponent as Cam2 } from "../asserts/Camera 02.svg";
 import { ReactComponent as Cam3 } from "../asserts/Camera 03.svg";
 import { ReactComponent as Cam4 } from "../asserts/Camera 04.svg";
 import Fp from "../asserts/fp.png";
+import { NavLink } from "react-router-dom";
 
 const FilmProduction = () => {
     return (
@@ -17,7 +18,7 @@ const FilmProduction = () => {
             <div className="servicesHeader">
                 <p>"Filmmaking is a chance to live many lifetimes." - Robert Altman</p>
                 <Ul />
-                <button className="backBtn"><BArrow />Back</button>
+                <NavLink to="/services"><button className="backBtn"><BArrow />Back</button></NavLink>
             </div>
             <div className="servicesCards">
                 <div className="servicesCard fp"><img src={Fp} alt="" /><span>Film Production</span></div>

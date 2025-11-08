@@ -7,6 +7,7 @@ import { ReactComponent as Ac1 } from "../asserts/Art Curation Icons 01.svg";
 import { ReactComponent as Ac2 } from "../asserts/Art Curation Icons 02.svg";
 import { ReactComponent as Ac3 } from "../asserts/Art Curation Icons 03.svg";
 import { ReactComponent as Ac4 } from "../asserts/Art Curation Icons 04.svg";
+import { NavLink } from "react-router-dom";
 
 const ArtCuration = () => {
     return (
@@ -17,7 +18,7 @@ const ArtCuration = () => {
             <div className="servicesHeader">
                 <p>"V take art where it belongs, to the people.” - Vernita Verma</p>
                 <Ul />
-                <button className="backBtn"><BArrow />Back</button>
+                <NavLink to="/services"><button className="backBtn"><BArrow />Back</button></NavLink>
             </div>
             <div className="servicesCards">
                 <div className="servicesCard fp"><img src={AcImg} alt="" /><span>Film Production</span></div>
